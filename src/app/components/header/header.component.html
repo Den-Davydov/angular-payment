@@ -1,0 +1,26 @@
+<div class="header">
+  <h1 class="header__text">Состояние платежей</h1>
+  <form [formGroup]="formPayment" class="header__form" #formDirective="ngForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="header__form__input">
+      <input matInput placeholder="Наименованение платежа" formControlName="paymentName">
+      <mat-error
+        *ngIf="formPayment.controls.paymentName.hasError('required') && formPayment.controls.paymentName.touched">
+        Название обязательно
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="header__form__input">
+      <input type="number" matInput placeholder="Стоимость за день" formControlName="paymentCost">
+      <mat-error *ngIf="(formPayment.controls.paymentCost.hasError('required') && formPayment.controls.paymentCost.touched)
+      || formPayment.controls.paymentCost.value<0 ">
+        Стоимость некорректна
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button class="header__form__button" type="submit"
+            [disabled]="formPayment.invalid || !formPayment.value.paymentCost || !formPayment.value.paymentName">
+      Добавить
+    </button>
+  </form>
+</div>

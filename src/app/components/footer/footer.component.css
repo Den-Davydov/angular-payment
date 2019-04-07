@@ -1,0 +1,8 @@
+.footer{
+  margin-left: 25px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+.footer__text{
+  font-weight: bold;
+}

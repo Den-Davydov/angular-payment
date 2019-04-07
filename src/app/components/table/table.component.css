@@ -1,0 +1,14 @@
+.matTable {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.mat-elevation-z8{
+  width: 100%;
+  text-align: center;
+}
+.material-icons{
+  cursor: pointer;
+}
+th.mat-header-cell {
+  text-align: center;
+}

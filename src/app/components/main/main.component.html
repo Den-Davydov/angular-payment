@@ -1,0 +1,10 @@
+<app-header
+  (createNewPayment)="onCreateNewPayment($event)">
+</app-header>
+<app-table
+  [paymentTable]="paymentTable" (deletePayment)="onDeletePayment($event)" (changeTable)="onChangeTable($event)">
+</app-table>
+<app-footer
+  [totalSum]="totalSum">
+</app-footer>
+

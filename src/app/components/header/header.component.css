@@ -1,0 +1,28 @@
+.header{
+  margin-bottom: 15px;
+}
+.header__text{
+  margin-left: 25px;
+  margin-top: 50px;
+}
+
+.header__form {
+  display: flex;
+  align-items: baseline;
+}
+
+.header__form__input {
+  width: 300px;
+  margin-left: 25px;
+}
+
+.header__form__button{
+  height: 35px;
+  width: 180px;
+  margin-left: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
